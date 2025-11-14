@@ -30,7 +30,7 @@ spring:
 external:
   api:
     books:
-      url: 
+      url: https://my-json-server.typicode.com/Gabriel-Arriola-UTN/libros/books
 
 server:
   port: 8080
