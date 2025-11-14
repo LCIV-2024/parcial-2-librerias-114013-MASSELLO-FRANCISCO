@@ -111,7 +111,6 @@ class UserServiceTest {
     @Test
     void testUpdateUser_Success() {
         when(userRepository.findById(1L)).thenReturn(Optional.of(testUser));
-        when(userRepository.existsByEmail(anyString())).thenReturn(false);
         when(userRepository.save(any(User.class))).thenReturn(testUser);
         
         UserResponseDTO result = userService.updateUser(1L, userRequestDTO);
@@ -140,4 +139,3 @@ class UserServiceTest {
         verify(userRepository, never()).deleteById(anyLong());
     }
 }
-
